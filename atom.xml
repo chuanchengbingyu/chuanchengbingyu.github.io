@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>川城冰宇</title>
   
-  <subtitle>心里有束光，眼里有片海</subtitle>
+  
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-28T03:20:30.728Z</updated>
+  <updated>2019-09-28T07:27:29.062Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,16 +17,28 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>我的祖国</title>
-    <link href="http://yoursite.com/2019/09/28/%E6%88%91%E7%9A%84%E7%A5%96%E5%9B%BD/"/>
-    <id>http://yoursite.com/2019/09/28/我的祖国/</id>
-    <published>2019-09-28T03:20:30.728Z</published>
-    <updated>2019-09-28T03:20:30.728Z</updated>
+    <title>能够控制早晨的人，方可控制人生</title>
+    <link href="http://yoursite.com/2019/09/28/%E8%83%BD%E5%A4%9F%E6%8E%A7%E5%88%B6%E6%97%A9%E6%99%A8%E7%9A%84%E4%BA%BA%EF%BC%8C%E6%96%B9%E5%8F%AF%E6%8E%A7%E5%88%B6%E4%BA%BA%E7%94%9F/"/>
+    <id>http://yoursite.com/2019/09/28/能够控制早晨的人，方可控制人生/</id>
+    <published>2019-09-28T07:16:12.000Z</published>
+    <updated>2019-09-28T07:27:29.062Z</updated>
+    
+    <content type="html"><![CDATA[<p>人生这场戏的最终结局，其实就是一个个选择叠加起来的总和……</p><a id="more"></a><p>当你老了，回顾一生，就会发觉：</p><blockquote></blockquote><p>什么时候上大学，什么时候决定做第一份职业，何时选定了对象、什么时候结婚，其实都是命运的巨变。</p><blockquote></blockquote><p>只是当时站在三岔路口，眼见风云千樯，你作出选择的那一日，在日记上，相当沉闷和平凡，当时还以为是生命中普通的一天。</p><blockquote></blockquote><p>那个令人心旌摇荡的美好未来，就从你明天早起开始。</p>]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;人生这场戏的最终结局，其实就是一个个选择叠加起来的总和……&lt;/p&gt;
+    
     </summary>
     
+    
+      <category term="Net Core" scheme="http://yoursite.com/tags/Net-Core/"/>
+    
+      <category term="Css" scheme="http://yoursite.com/tags/Css/"/>
+    
+      <category term="Vue" scheme="http://yoursite.com/tags/Vue/"/>
+    
+      <category term="孤独" scheme="http://yoursite.com/tags/%E5%AD%A4%E7%8B%AC/"/>
     
   </entry>
   
