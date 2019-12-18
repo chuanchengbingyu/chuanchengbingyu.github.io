@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-18T15:43:23.738Z</updated>
+  <updated>2019-12-18T17:07:51.134Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,26 +17,26 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>NetCore2和NetCore3 启动文件代码对比</title>
+    <title>NetCore2.2和3.1 启动文件差异</title>
     <link href="http://yoursite.com/2019/12/18/NetCore2%E5%92%8CNetCore3-%E5%90%AF%E5%8A%A8%E6%96%87%E4%BB%B6%E4%BB%A3%E7%A0%81%E6%AF%94%E8%BE%83/"/>
     <id>http://yoursite.com/2019/12/18/NetCore2和NetCore3-启动文件代码比较/</id>
     <published>2019-12-18T14:57:27.000Z</published>
-    <updated>2019-12-18T15:43:23.738Z</updated>
+    <updated>2019-12-18T17:07:51.134Z</updated>
     
-    <content type="html"><![CDATA[<p>NetCore2和NetCore3中，Program和StartUp都有一些变化，具体看下图：</p><p>Program文件：<br><img src="https://s2.ax1x.com/2019/12/18/QHHaS1.md.jpg" alt="图一"></p><p>StartUp文件：<br><img src="https://s2.ax1x.com/2019/12/18/QHHdQx.md.jpg" alt="图二"><br><img src="https://s2.ax1x.com/2019/12/18/QHHNWR.md.jpg" alt="图三"></p>]]></content>
+    <content type="html"><![CDATA[<p>NetCore2.2和NetCore3.1中，Program和Startup都有一些变化，具体看下图：</p><p><strong>Program文件</strong>：<br><img src="https://s2.ax1x.com/2019/12/18/QHHaS1.md.jpg" alt="图一"></p><p><strong>解读</strong>：NetCore设计的初衷，控制台作为通用入口，构建web后服务器承载web并运行起来。NetCore2.2中直接创建IWebHostBuilder然后运行起来，NetCore3.1中，先创建IHostBuilder，然后再配置使用IWebHostBuilder，最后运行起来。个人认为3.1中步骤变多了，但是容易理解和更灵活。</p><hr><p><strong>StartUp文件：</strong><br><img src="https://s2.ax1x.com/2019/12/19/QHO6DP.md.jpg" alt="图二"><br><img src="https://s2.ax1x.com/2019/12/19/QHOyut.md.jpg" alt="图三"></p><p><strong>解读</strong>：ConfigureServices方法中，NetCore3.1去掉cookie策略的相关配置，去掉的原因可以参考这边<a href="https://docs.microsoft.com/zh-cn/aspnet/core/security/samesite?view=aspnetcore-3.1" target="_blank" rel="noopener">文章</a>。NetCore3.1中添加Mvc使用的是AddControllersWithViews，查看这个方法的说明(“This method configures the MVC services for the commonly used features with controllers with views”)，个人认为只是使用mvc核心、通用的一些功能，应该没有集成路由，因为后面Configure方法中，单独使用了路由。</p><hr><p>作者技能有限，如有不恰当的地方欢迎大家拍砖。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;NetCore2和NetCore3中，Program和StartUp都有一些变化，具体看下图：&lt;/p&gt;
-&lt;p&gt;Program文件：&lt;br&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/12/18/QHHaS1.md.jpg&quot; alt=&quot;图一&quot;&gt;&lt;/p
+        &lt;p&gt;NetCore2.2和NetCore3.1中，Program和Startup都有一些变化，具体看下图：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Program文件&lt;/strong&gt;：&lt;br&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/12/18/QHHaS1
       
     
     </summary>
     
     
-      <category term="Net Core3" scheme="http://yoursite.com/tags/Net-Core3/"/>
+      <category term="Net Core3.1" scheme="http://yoursite.com/tags/Net-Core3-1/"/>
     
   </entry>
   

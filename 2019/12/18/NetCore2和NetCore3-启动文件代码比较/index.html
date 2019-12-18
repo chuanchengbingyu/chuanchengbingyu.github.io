@@ -119,14 +119,14 @@
 <meta name="description" content="能够控制早晨的人，方可控制人生。">
 <meta name="keywords" content="川城冰宇">
 <meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="http://yoursite.com/categories/index.html">
 <meta property="og:site_name" content="川城冰宇">
 <meta property="og:description" content="能够控制早晨的人，方可控制人生。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-28T03:20:30.729Z">
+<meta property="og:updated_time" content="2019-09-28T03:20:30.732Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
+<meta name="twitter:title" content="categories">
 <meta name="twitter:description" content="能够控制早晨的人，方可控制人生。">
 
 
@@ -159,13 +159,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/">
+  <link rel="canonical" href="http://yoursite.com/categories/">
 
 
 
 
 
-  <title>NetCore2和NetCore3 启动文件代码对比 | 川城冰宇</title>
+  <title>NetCore2.2和3.1 启动文件差异 | 川城冰宇</title>
   
 
 
@@ -350,7 +350,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">NetCore2和NetCore3 启动文件代码对比</h1>
+          <h1 class="post-title" itemprop="name headline">NetCore2.2和3.1 启动文件差异</h1>
         
 
         <div class="post-meta">
@@ -408,9 +408,14 @@
       
 
       
-        <p>NetCore2和NetCore3中，Program和StartUp都有一些变化，具体看下图：</p>
-<p>Program文件：<br><img src="https://s2.ax1x.com/2019/12/18/QHHaS1.md.jpg" alt="图一"></p>
-<p>StartUp文件：<br><img src="https://s2.ax1x.com/2019/12/18/QHHdQx.md.jpg" alt="图二"><br><img src="https://s2.ax1x.com/2019/12/18/QHHNWR.md.jpg" alt="图三"></p>
+        <p>NetCore2.2和NetCore3.1中，Program和Startup都有一些变化，具体看下图：</p>
+<p><strong>Program文件</strong>：<br><img src="https://s2.ax1x.com/2019/12/18/QHHaS1.md.jpg" alt="图一"></p>
+<p><strong>解读</strong>：NetCore设计的初衷，控制台作为通用入口，构建web后服务器承载web并运行起来。NetCore2.2中直接创建IWebHostBuilder然后运行起来，NetCore3.1中，先创建IHostBuilder，然后再配置使用IWebHostBuilder，最后运行起来。个人认为3.1中步骤变多了，但是容易理解和更灵活。</p>
+<hr>
+<p><strong>StartUp文件：</strong><br><img src="https://s2.ax1x.com/2019/12/19/QHO6DP.md.jpg" alt="图二"><br><img src="https://s2.ax1x.com/2019/12/19/QHOyut.md.jpg" alt="图三"></p>
+<p><strong>解读</strong>：ConfigureServices方法中，NetCore3.1去掉cookie策略的相关配置，去掉的原因可以参考这边<a href="https://docs.microsoft.com/zh-cn/aspnet/core/security/samesite?view=aspnetcore-3.1" target="_blank" rel="noopener">文章</a>。NetCore3.1中添加Mvc使用的是AddControllersWithViews，查看这个方法的说明(“This method configures the MVC services for the commonly used features with controllers with views”)，个人认为只是使用mvc核心、通用的一些功能，应该没有集成路由，因为后面Configure方法中，单独使用了路由。</p>
+<hr>
+<p>作者技能有限，如有不恰当的地方欢迎大家拍砖。</p>
 
       
     </div>
@@ -462,7 +467,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Net-Core3/" rel="tag"><i class="fa fa-tag"></i> Net Core3</a>
+            <a href="/tags/Net-Core3-1/" rel="tag"><i class="fa fa-tag"></i> Net Core3.1</a>
           
         </div>
       
